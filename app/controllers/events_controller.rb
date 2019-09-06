@@ -1,4 +1,6 @@
+# Контроллер, управляющий событиями
 class EventsController < ApplicationController
+  # Задаем объект @event для тех действий, где он нужен
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
