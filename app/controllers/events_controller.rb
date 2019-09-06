@@ -52,7 +52,7 @@ class EventsController < ApplicationController
     def set_event
       @event = Event.find(params[:id])
     end
-
+    # Отредактируем параметры события
     def event_params
       params.require(:event).permit(:title, :address, :datetime, :description)
     end
