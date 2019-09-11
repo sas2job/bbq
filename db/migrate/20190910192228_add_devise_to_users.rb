@@ -1,9 +1,15 @@
+# Миграция сгенерирована девайзом при добавлении функционала:
+#   rails g devise User
+#
 # frozen_string_literal: true
 
 class AddDeviseToUsers < ActiveRecord::Migration[5.2]
+  # метод self.up - для накатывания миграции
   def self.up
+    # меняем таблицу users
     change_table :users do |t|
       ## Database authenticatable
+      # меняем таблицу email - новые ограничения
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
@@ -43,6 +49,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.2]
     # add_index :users, :unlock_token,         unique: true
   end
 
+  # self.down - для откатывания миграции
   def self.down
     # By default, we don't want to make any assumption about how to roll back a migration when your
     # model already existed. Please edit below which fields you would like to remove in this migration.
