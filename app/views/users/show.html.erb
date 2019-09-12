@@ -3,10 +3,10 @@
 
   <%= image_tag user_avatar(@user) %>
 
-  <p class="buffer-top">
-  <%= link_to "Редактировать профиль", edit_user_path(@user),
-    class: 'btn btn-default' %>
-  </p>
+  <% if @user == current_user %>
+    <p class="buffer-top"><%= link_to 'Редактировать профиль',
+      edit_user_path(@user), class: 'btn btn-default' %></p>
+  <% end %>
 
     <div class="row">
     <div class="col-md-12">
