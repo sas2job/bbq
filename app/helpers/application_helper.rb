@@ -1,4 +1,9 @@
 module ApplicationHelper
+  # Возвращает путь к аватарке данного юзера
+  def user_avatar(user)
+    asset_path('user.png')
+  end
+
   def bootstrap_class_for flash_type
     { success: "alert-success", error: "alert-danger", alert: "alert-warning", notice: "alert-info" }.stringify_keys[flash_type.to_s] || flash_type.to_s
   end
