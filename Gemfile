@@ -23,6 +23,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'slim'
 # Translations for the devise gem
 gem 'devise-i18n'
+# Russian language support for Ruby and Rails
+gem 'russian'
 
 group :production do
   gem 'pg'
