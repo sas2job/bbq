@@ -21,6 +21,8 @@ gem 'jquery-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 # Slim is a Ruby template language
 gem 'slim'
+# Translations for the devise gem
+gem 'devise-i18n'
 
 group :production do
   gem 'pg'
