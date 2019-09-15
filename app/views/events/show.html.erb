@@ -20,6 +20,12 @@
                 class: 'btn btn-primary' %>
             </div>
           <% end %>
+          <% if current_user_can_edit?(@event) %>
+            <div class="buffer-both">
+              <%= link_to 'Удалить', @event, method: :delete, data: {confirm: t('delete.are_you_sure')},
+                class: 'btn btn-danger' %>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
