@@ -3,7 +3,7 @@
 */
 
 /* Buffers */
-.buffer-top {
+  .buffer-top {
     margin-top: 20px;
   }
 
@@ -15,7 +15,9 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-
+  .buffer-x{
+    margin: 0 10px;
+  }
   /* Avatars for users & events */
   .img-icon, .img-icon-small {
     height: 50px;
