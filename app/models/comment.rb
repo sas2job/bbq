@@ -1,10 +1,9 @@
 # Модель Комментария
 class Comment < ApplicationRecord
   belongs_to :event
-  belongs_to :user
 
-  # Не может быть комментария без события
-  validates  :event, presence: true
+  # Коментарий может быть создан анонимным пользователем
+  belongs_to :user, optional: true
 
   # Пустой комментарий тоже недопустим
   validates :body, presence: true
