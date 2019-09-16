@@ -20,14 +20,24 @@
                 class: 'btn btn-primary' %>
             </div>
           <% end %>
+
           <% if current_user_can_edit?(@event) %>
             <div class="buffer-both">
-              <%= link_to 'Удалить', @event, method: :delete, data: {confirm: t('delete.are_you_sure')},
+              <%= link_to 'Удалить', @event, method: :delete, data: {confirm: t('.are_you_sure')},
                 class: 'btn btn-danger' %>
             </div>
           <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+        </div> <%# col-md-6 %>
+      </div> <%# event-info-inner %>
+    </div> <%# col-md-12 %>
+  </div> <%# event-info %>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="event-comments buffer-top">
+        <%= render partial: 'comments/comment', collection: @event.comments %>
+      </div> <%# event-comments %>
+    </div> <%# col-md-8 %>
+  </div> <%# row %>
+</div> <%# event %>

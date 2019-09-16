@@ -37,6 +37,12 @@ ru:
     name: 'Шашлыки'
     company: 'Alexander Smirnov'
 
+  # Перевод сообщения об удалении комментария
+  comments:
+    comment:
+      destroy_confirm: 'Вы уверены, что хотите удалить этот комментарий?'
+
   # Перевод удаления события
-  delete:
-    are_you_sure: 'Удалить событие?'
+  events:
+    show:
+      are_you_sure: 'Удалить событие?'
