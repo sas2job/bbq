@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   # корень сайта
   root "events#index"
 
-  resources :events
+  resources :events do
+    # вложенный ресурс комментов
+    resources :comments, only: [:create, :destroy]
+  end
 
   # Поддерживаются только: show, edit, update
   resources :users, only: [:show, :edit, :update]
