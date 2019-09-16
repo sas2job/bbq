@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   # Пользователь может создавать много событий
   has_many :events
+  # У пользователя много комментариев
+  has_many :comments, dependent: :destroy
 
   # У пользователя не должно быть имя длиннее 35 букв
   validates :name, presence: true, length: {maximum: 35}
