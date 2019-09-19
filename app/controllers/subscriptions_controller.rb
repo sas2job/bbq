@@ -7,16 +7,19 @@ class SubscriptionsController < ApplicationController
   before_action :set_subscription, only: [:destroy]
 
   def create
-    # Болванка для новой подписки
-    @new_subscription = @event.subscriptions.build(subscription_params)
-    @new_subscription.user = current_user
+    message = {notice: I18n.t('controllers.subscriptions.created')}
+
+    if current_user_can_edit?(@event)
+      message = {alert: I18n.t('controllers.subscriptions.error_self_subscribe')}
+    else
+      @new_subscription = @event.subscriptions.build(subscription_params)
+      @new_subscription.user = current_user
+    end
 
     if @new_subscription.save
-      # Если сохранилась успешно, редирект на страницу самого события
-      redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
+      redirect_to @event, message
     else
-      # если ошибки — рендерим здесь же шаблон события
-      render 'events/show', alert: I18n.t('controllers.subscriptions.error')
+      render 'events/show', message
     end
   end
 
