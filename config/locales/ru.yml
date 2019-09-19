@@ -1,5 +1,10 @@
 ru:
   # Перевод моделей
+  errors:
+    count:
+      one: В вашей форме %{count} ошибка
+      few: В вашей форме %{count} ошибки
+      many: В вашей форме %{count} ошибок
   activerecord:
     # Перевод названия моделей
     models:
