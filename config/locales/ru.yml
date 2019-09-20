@@ -70,3 +70,31 @@ ru:
   events:
     show:
       are_you_sure: 'Удалить событие?'
+
+  # Перевод событий нового пользователя
+  devise:
+    registrations:
+      new:
+        title: 'Зарегистрироваться'
+        minimum: 'символов минимум'
+        email:
+          enter: 'Введите email'
+        password:
+          enter: 'Введите пароль'
+          repeat: 'Повторите пароль'
+
+    # Перевод событий существующего пользователя
+    sessions:
+      new:
+        title: 'Войти'
+        email:
+          enter: 'Введите email'
+        password:
+          enter: 'Введите пароль'
+
+    # Перевод текста кнопок
+    shared:
+      links:
+        log_in: 'Войти'
+        sign_up: 'Зарегистрироваться'
+        forgot: 'Забыли пароль?'
