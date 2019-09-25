@@ -9,6 +9,15 @@ module ApplicationHelper
     end
   end
 
+  # user_avatar, только возвращает миниатюрную версию
+  def user_avatar_thumb(user)
+    if user.avatar.file.present?
+      user.avatar.thumb.url
+    else
+      asset_path('user.png')
+    end
+  end
+
   # Возвращает миниатюрную версию фотки
   def event_thumb(event)
     photos = event.photos.persisted
