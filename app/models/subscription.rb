@@ -22,10 +22,6 @@ class Subscription < ApplicationRecord
 
   validate :user_must_not_be_author, on: :create, if: -> { user.present? }
 
-  def user_must_not_be_author
-    errors.add(:user_id, I18n.t('errors.self_subscribe')) if user == event.user
-  end
-
   # переопределяем метод, если есть юзер, выдаем его имя,
   # если нет -- дергаем исходный переопределенный метод
   def user_name
@@ -49,5 +45,10 @@ class Subscription < ApplicationRecord
   private
   def user_email_must_be_unique
     errors.add(:user_email, I18n.t('errors.user_email')) if User.all.where(email: user_email).any?
+  end
+
+  private
+  def user_must_not_be_author
+    errors.add(:user_id, I18n.t('errors.self_subscribe')) if user == event.user
   end
 end
