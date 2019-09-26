@@ -83,7 +83,7 @@ ru:
   devise:
     registrations:
       new:
-        title: 'Зарегистрироваться'
+        forgot_your_password: 'Зарегистрироваться'
         minimum: 'символов минимум'
         email:
           enter: 'Введите email'
