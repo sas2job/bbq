@@ -74,6 +74,22 @@ ru:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
 
+  # Перевод сообщений почтовых сообщений    
+  event_mailer:
+    comment:
+      title: 'Новый комментарий'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    subscription:
+      title: 'Новая подписка'
+      name: 'Имя'
+      email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'    
   # Перевод удаления события
   events:
     show:
