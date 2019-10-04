@@ -44,11 +44,11 @@ class Subscription < ApplicationRecord
 
   private
   def user_email_must_be_unique
-    errors.add(:user_email, I18n.t('errors.user_email')) if User.all.where(email: user_email).any?
+    errors.add :user_email, :user_email if User.all.where(email: user_email).any?
   end
 
   private
   def user_must_not_be_author
-    errors.add(:user_id, I18n.t('errors.self_subscribe')) if user == event.user
+    errors.add :user_id, :self_subscribe if user == event.user
   end
 end

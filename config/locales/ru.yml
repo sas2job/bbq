@@ -5,8 +5,6 @@ ru:
       one: В вашей форме %{count} ошибка
       few: В вашей форме %{count} ошибки
       many: В вашей форме %{count} ошибок
-    user_email: 'уже занят зарегистрированным пользователем'
-    self_subscribe: Вы попытались подписаться на свое событие
 
   activerecord:
     # Перевод названия моделей
@@ -17,6 +15,15 @@ ru:
       subscription: 'Подписка'
       photo: 'Фотография'
 
+    # Перевод ошибок в моделях  
+    errors:
+      models:
+       subscription:
+        attributes:
+          user_email:
+            user_email: 'уже занят зарегистрированным пользователем'
+          user_id:
+            self_subscribe: 'Вы попытались подписаться на свое событие'  
     # Перевод названий аттрибутов моделей
     attributes:
       user:
