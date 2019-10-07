@@ -64,15 +64,20 @@
         </div>
       </div>
       <% unless current_user_can_edit?(@event) %>
-      <div class="event-subscription-form">
-        <h4>Я пойду:</h4>
+        <div class="event-subscription-form">
+          <h4>Я пойду:</h4>
           <div>
             <%= render partial: 'subscriptions/form', locals: {
                 subscription: @new_subscription || @event.subscriptions.build
             } %>
           </div>
-      </div>
+        </div>
       <% end %>
     </div>
   </div> <%# row %>
+  <div class="row">
+    <div class="col-md">
+      <div id="map" style="min-height: 300px" data-address='<%= @event.address %>'></div>
+    </div>
+  </div>
 </div> <%# event %>
