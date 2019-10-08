@@ -25,6 +25,9 @@
           <% end %>
 
         </div> <%# col-md-6 %>
+        <div class="col-md-6">
+          <div id="map" style="min-height: 300px" data-address='<%= @event.address %>'></div>
+        </div>
       </div> <%# event-info-inner %>
     </div> <%# col-md-12 %>
   </div> <%# event-info %>
@@ -75,9 +78,4 @@
       <% end %>
     </div>
   </div> <%# row %>
-  <div class="row">
-    <div class="col-md">
-      <div id="map" style="min-height: 300px" data-address='<%= @event.address %>'></div>
-    </div>
-  </div>
 </div> <%# event %>
