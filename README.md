@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# BBQ
 
-Things you may want to cover:
+Using this web application, you can create events for your friends, as well as subscribe on and comment these and others events.
 
-* Ruby version
+[BBQ](http://bbqv2.herokuapp.com/) - heroku deployed example
 
-* System dependencies
+### Requirements
 
-* Configuration
+`ruby >= 2.6.2`
 
-* Database creation
+`rails ~> 5.2.0`
 
-* Database initialization
+### Installation & using
 
-* How to run the test suite
+In `terminal` or `cmd`
 
-* Services (job queues, cache servers, search engines, etc.)
+- `$ git clone git@github.com:sas2job/bbq.git`
 
-* Deployment instructions
+- `$ gem install bundler` - if needed
 
-* ...
+- `$ bundle install`
+
+- `$ rails s` for server starting
+
+Then open `http://localhost:3000` at your web-browser
