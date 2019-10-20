@@ -22,6 +22,8 @@ In `terminal` or `cmd`
 
 - `$ bundle install`
 
+- `$ rails db:migrate`
+
 - `$ rails s` for server starting
 
 Then open `http://localhost:3000` at your web-browser
