@@ -44,7 +44,7 @@ class Subscription < ApplicationRecord
 
   private
   def user_email_must_be_unique
-    errors.add :user_email, :user_email if User.all.where(email: user_email).any?
+    errors.add :user_email, :user_email_is_not_unique if User.where(email: user_email).any?
   end
 
   private
