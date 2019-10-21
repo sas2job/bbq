@@ -29,6 +29,7 @@ gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
+
 group :production do
   gem 'pg'
 end
@@ -41,6 +42,8 @@ group :development, :test do
   gem 'listen'
   gem 'pry-rails'
   gem 'awesome_print', :require => 'ap'
+  # A web interface for browsing Ruby on Rails sent emails
+  # gem 'letter_opener_web'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
