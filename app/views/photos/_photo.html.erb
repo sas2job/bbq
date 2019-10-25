@@ -1,7 +1,6 @@
 <%# Паршал для вывода отдельной фотографии %>
 <div class="event-photo buffer-both">
   <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
-
   <%# Показываем не только фотку, но и пользователя, который её добавил %>
   Добавил <%= render partial: 'users/user', object: photo.user %>
 </div>
