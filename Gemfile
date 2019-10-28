@@ -29,6 +29,8 @@ gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
+gem 'lightbox-bootstrap-rails', '5.1.0.1'
+gem 'coffee-rails', '~> 5.0.0'
 
 group :production do
   gem 'pg'
