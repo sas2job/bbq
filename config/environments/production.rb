@@ -92,14 +92,15 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { :host => "bbqv2.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: 'http://bbq-alex.site/' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:  Rails.application.credentials.mail_address,
-    port: Rails.application.credentials.mail_port,
-    user_name: Rails.application.credentials.mail_user_name,
-    password: Rails.application.credentials.mail_password,
-    authentication: Rails.application.credentials.mail_authentication,
-    enable_starttls_auto: Rails.application.credentials.mail_enable_starttls_auto
+    address: 'smtp.sendgrid.net',
+    port: '587',
+    authentication: :plain,
+    user_name: 'apikey',
+    password: Rails.application.credentials.sg_api_key,
+    domain: 'bbq-alex.site',
+    enable_starttls_auto: true
   }
 end
