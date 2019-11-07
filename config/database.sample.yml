@@ -22,6 +22,6 @@ test:
 
 production:
   adapter: postgresql
-  user: Rails.application.credentials.production_db_user
-  password: Rails.application.credentials.production_db_password
-  database: Rails.application.credentials.production_db_database
+  user: 
+  password: 
+  database: 
