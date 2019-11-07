@@ -22,6 +22,6 @@ test:
 
 production:
   adapter: postgresql
-  user: Rails.application.credentials.prod_db[:user]
-  password: Rails.application.credentials.prod_db[:password]
-  database: Rails.application.credentials.prod_db[:database]
+  user: <%= ENV['POSTGRES_USER'] %>
+  password: R<%= ENV['POSTGRES_PASSWORD'] %>
+  database: <%= ENV['POSTGRES_DB'] %>

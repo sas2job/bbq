@@ -31,6 +31,7 @@ gem 'rmagick'
 gem 'fog-aws'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 gem 'coffee-rails', '~> 5.0.0'
+gem 'dotenv-rails'
 
 group :production do
   gem 'pg'
