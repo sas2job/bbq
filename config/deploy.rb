@@ -13,7 +13,7 @@ set :repo_url, 'git@github.com:sas2job/bbq.git'
 set :deploy_to, '/home/deploy/apps/bbq'
 
 # Файлы, которые лежат вне репозитория
-append :linked_files, 'config/database.yml', 'config/secrets.yml'
+append :linked_files, 'config/master.key', '.env'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 
 # Default branch is :master
