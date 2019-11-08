@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock '3.11.2'
 
 # Это имя приложения
 set :application, 'bbq'
@@ -8,7 +8,9 @@ set :application, 'bbq'
 set :repo_url, 'git@github.com:sas2job/bbq.git'
 
 # Папка, где будет храниться приложение
-set :deploy_to, '/home/deploy/www'
+# set :deploy_to, '/home/deploy/www'
+
+set :deploy_to, '/home/deploy/apps/bbq'
 
 # Файлы, которые лежат вне репозитория
 append :linked_files, 'config/database.yml', 'config/secrets.yml'
