@@ -32,6 +32,7 @@ gem 'fog-aws'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 gem 'coffee-rails', '~> 5.0.0'
 gem 'dotenv-rails'
+gem 'pundit'
 
 group :production do
   gem 'pg'
@@ -55,6 +56,9 @@ group :development, :test do
   gem 'awesome_print', :require => 'ap'
   # A web interface for browsing Ruby on Rails sent emails
   # gem 'letter_opener_web'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

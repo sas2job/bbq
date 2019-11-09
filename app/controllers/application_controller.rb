@@ -1,4 +1,8 @@
 class ApplicationController < ActionController::Base
+  # Позволяем использовать возможности
+  # пандита во всех контроллерах
+  include Pundit
+  
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -8,6 +12,8 @@ class ApplicationController < ActionController::Base
 
   # Хелпер метод, доступный во вьюхах
   helper_method :current_user_can_edit?
+
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   # Настройка для девайза — разрешаем обновлять профиль, но обрезаем
   # параметры, связанные со сменой пароля.
@@ -27,5 +33,12 @@ class ApplicationController < ActionController::Base
       model.user == current_user ||
       (model.try(:event).present? && model.event.user == current_user)
     )
+  end
+
+  private
+
+  def user_not_authorized
+    flash[:alert] = t('pundit.not_authorized')
+    redirect_to(request.referrer || root_path)
   end
 end
