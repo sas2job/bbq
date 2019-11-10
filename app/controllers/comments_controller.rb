@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
 
     if @new_comment.save
       # уведомляем всех подписчиков о новом комментарии
-      notify_subscribers(@event, @new_comment)
+      MailNotifierJob.perform_later('comment', @new_comment)
 
       # Если сохранился, редирект на страницу самого события
       redirect_to @event, notice: I18n.t('controllers.comments.created')
@@ -51,13 +51,5 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:body, :user_name)
-  end
-
-  def notify_subscribers(event, comment)
-    all_emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [current_user.email]).uniq
-
-    all_emails.each do |mail|
-      EventMailer.comment(event, comment, mail).deliver_later
-    end
   end
 end
