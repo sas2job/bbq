@@ -51,6 +51,7 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'capistrano-bundler', '~> 1.2'
   gem 'letter_opener' 
+  gem 'capistrano-resque', '~> 0.2.3', require: false
 end
 
 group :development, :test do
