@@ -38,6 +38,7 @@ require 'capistrano/bundler'
 require 'capistrano/rbenv' # или RVM
 require 'capistrano/rails'
 require 'capistrano/passenger'
+require 'capistrano-resque'
 # require 'capistrano/puma'
 # install_plugin Capistrano::Puma::Nginx  # if you want to upload a nginx site template
 

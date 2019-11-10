@@ -46,6 +46,8 @@ append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bund
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+after 'deploy:restart', 'resque:restart'
+
 namespace :deploy do
 
   after :restart, :clear_cache do

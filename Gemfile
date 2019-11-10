@@ -31,8 +31,14 @@ gem 'rmagick'
 gem 'fog-aws'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 gem 'coffee-rails', '~> 5.0.0'
+# переменные окружения 
 gem 'dotenv-rails'
+# авторизация пользователей 
 gem 'pundit'
+
+# работа с фоновыми заданиями
+gem 'delayed_job_active_record'
+gem 'resque', '~> 1.27'
 
 group :production do
   gem 'pg'
@@ -44,6 +50,7 @@ group :development do
   gem 'capistrano-passenger', '~> 0.2'
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'capistrano-bundler', '~> 1.2'
+  gem 'letter_opener' 
 end
 
 group :development, :test do
