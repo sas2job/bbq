@@ -1,0 +1,81 @@
+
+ru:
+  activerecord:
+    attributes:
+      user:
+        confirmed_at: Дата подтверждения
+        created_at: Дата создания
+        current_password: Текущий пароль
+        email: Email
+        encrypted_password: Зашифрованный пароль
+        failed_attempts: Неудачные попытки
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        remember_created_at: Дата создания запоминания
+        remember_me: Запомнить меня
+        reset_password_sent_at: Дата отправки сброса пароля
+        reset_password_token: Токен сброса пароля
+        sign_in_count: Количество входов
+    models:
+      user:
+        few: Пользователя
+        many: Пользователей
+        one: Пользователь
+        other: Пользователи
+  devise:
+    failure:
+      already_authenticated: Вы уже вошли в систему.
+      invalid: Неправильный %{authentication_keys} или пароль.
+      not_found_in_database: Неправильный %{authentication_keys} или пароль.
+      timeout: Ваш сеанс закончился. Пожалуйста, войдите в систему снова.
+      unauthenticated: Вам необходимо войти в систему или зарегистрироваться.
+    passwords:
+      edit:
+        change_my_password: Изменить мой пароль
+        change_your_password: Изменить пароль
+        confirm_new_password: Повторите новый пароль
+        new_password: Новый пароль
+        password_length: (Минимальная длина пароля %{password_length} символов)
+      new:
+        forgot_your_password: Забыли пароль?
+        send_me_reset_password_instructions: Выслать новый пароль
+      updated: Ваш пароль изменен. Теперь вы вошли в систему.
+      updated_not_active: Ваш пароль изменен.
+    registrations:
+      edit:
+        are_you_sure: Вы уверены?
+        currently_waiting_confirmation_for_email: 'Ожидается подтверждение адреса E-mail: %{email}'
+        leave_blank_if_you_don_t_want_to_change_it: оставьте поле пустым, если не хотите его менять
+        title: Редактировать профиль
+        update: Обновить
+        we_need_your_current_password_to_confirm_your_changes: введите текущий пароль для подтверждения изменений
+        back: Назад
+        password_length: (Минимальная длина пароля %{password_length} символов)
+      new:
+        sign_up: Регистрация
+        password_length: (Минимальная длина пароля %{password_length} символов)
+      signed_up: Добро пожаловать! Вы успешно зарегистрировались.
+      updated: Ваша учетная запись изменена.
+      updated_but_not_signed_in: Ваш аккаунт успешно обновлен, но так как пароль был изменен, необходимо выполнить вход еще раз
+    sessions:
+      already_signed_out: Выход из системы уже выполнен.
+      new:
+        sign_in: Войти
+      signed_in: Вход в систему выполнен.
+      signed_out: Выход из системы выполнен.
+    shared:
+      links:
+        back: Назад
+        forgot_your_password: Забыли пароль?
+        sign_in: Войти
+        sign_up: Регистрация
+        sign_in_through: Залогиниться через %{social_media}
+  errors:
+    messages:
+      expired: устарела. Пожалуйста, запросите новую
+      not_found: не найден
+      not_saved:
+        few: "%{resource}: сохранение не удалось из-за %{count} ошибок:"
+        many: "%{resource}: сохранение не удалось из-за %{count} ошибок:"
+        one: "%{resource}: сохранение не удалось из-за %{count} ошибки:"
+        other: "%{resource}: сохранение не удалось из-за %{count} ошибки:"

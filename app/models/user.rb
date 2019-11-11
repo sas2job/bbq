@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # Добавляем к юзеру функции Девайза, перечисляем конкретные наборы функций
   devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :validatable,
-        :omniauthable, omniauth_providers: [:facebook]
+        :omniauthable, omniauth_providers: [:facebook, :vkontakte]
 
   # Пользователь может создавать много событий
   has_many :events
@@ -51,6 +51,20 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token.first(16)
     end
   end
+
+  def self.find_for_vkontakte_oauth(access_token)
+    email = access_token.info.email
+    url = access_token.info.urls[:Vkontakte]
+
+    where(email: email).first_or_create! do |user|
+      user.email = email
+      user.url = url
+      user.provider = access_token.provider
+      user.name = access_token.info.name
+      user.password = Devise.friendly_token.first(16)
+    end
+  end
+
 
   private
   def link_subscriptions

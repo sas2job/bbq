@@ -48,6 +48,7 @@ gem 'resque', '~> 1.27'
 # Аутентификация
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
 
 group :production do
   gem 'pg'
