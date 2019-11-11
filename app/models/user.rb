@@ -4,7 +4,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   # Добавляем к юзеру функции Девайза, перечисляем конкретные наборы функций
   devise :database_authenticatable, :registerable,
-        :recoverable, :rememberable, :validatable, :trackable,
+        :recoverable, :rememberable, :validatable,
         :omniauthable, omniauth_providers: [:facebook]
 
   # Пользователь может создавать много событий
