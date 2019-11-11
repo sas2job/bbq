@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  # дергаем спец. девайзовский метод, который генерит все нужные ему пути
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'registrations',
+    omniauth_callbacks: 'users/omniauth_callbacks'
+  }
+  
   # корень сайта
   root "events#index"
 

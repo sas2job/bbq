@@ -26,11 +26,16 @@ gem 'devise-i18n'
 # Russian language support for Ruby and Rails
 gem 'russian'
 gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+
+# загрузка и обработка картинок
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog-aws'
+
+# карусель 
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 gem 'coffee-rails', '~> 5.0.0'
+
 # переменные окружения 
 gem 'dotenv-rails'
 # авторизация пользователей 
@@ -39,6 +44,10 @@ gem 'pundit'
 # работа с фоновыми заданиями
 gem 'delayed_job_active_record'
 gem 'resque', '~> 1.27'
+
+# Аутентификация
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :production do
   gem 'pg'

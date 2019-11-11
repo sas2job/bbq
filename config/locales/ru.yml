@@ -74,6 +74,8 @@ ru:
   app:
     name: 'Шашлыки'
     company: 'Alexander Smirnov'
+    policy: 'Политика конфиденциальности'
+    policy_path: 'https://bbq-alex.site/policy'
 
   # Перевод сообщения об удалении комментария
   comments:
