@@ -28,11 +28,17 @@ Using this web application, you can create events for your friends, as well as s
 
 ### Requirements
 
-`ruby >= 2.6.2`
+`ruby >= 2.6.6`
 
 `rails ~> 5.2.0`
 
 ### Installation & using
+
+For images need install:
+
+- `sudo apt-get install libmagickwand-dev` (For Ubunru)
+
+- `gem install rmagick`
 
 In `terminal` or `cmd`
 
