@@ -30,7 +30,7 @@ Using this web application, you can create events for your friends, as well as s
 
 `ruby >= 2.6.6`
 
-`rails ~> 5.2.0`
+`rails ~> 6.1.0`
 
 ### Installation & using
 

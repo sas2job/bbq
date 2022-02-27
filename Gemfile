@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 6.1'
 # Use Devise for authentication
 gem 'devise'
 # Bootstrap 4 ruby gem for Ruby on Rails
@@ -25,7 +25,7 @@ gem 'slim'
 gem 'devise-i18n'
 # Russian language support for Ruby and Rails
 gem 'russian'
-gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+gem 'rails-i18n'
 
 # загрузка и обработка картинок
 gem 'carrierwave'
