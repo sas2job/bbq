@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
 ActionMailer::Base.smtp_settings = {
-  domain: 'bbq-alex.site',
-  address: 'smtp.sendgrid.net',
-  port: 587,
-  authentication: :plain,
-  user_name: 'apikey',
-  password: Rails.application.credentials.sg_api_key
+  address:  Rails.application.credentials.mail_address,
+  port: Rails.application.credentials.mail_port,
+  domain: 'bbqv2.herokuapp.com',
+  user_name: Rails.application.credentials.mail_user_name,
+  password: Rails.application.credentials.mail_password,
+  authentication: Rails.application.credentials.mail_authentication,
+  enable_starttls_auto: Rails.application.credentials.mail_enable_starttls_auto
 }
